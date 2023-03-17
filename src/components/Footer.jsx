@@ -10,7 +10,8 @@ const Footer = () => {
             <AppBar align='center' position="static">
                 <Toolbar  >
                     <Typography variant="h7" component="div" sx={{ flexGrow: 1 }}>
-                        &copy; {new Date().getFullYear()} - Powered By Fer Pascual
+                        &copy; {new Date().getFullYear()}
+                        - Powered By Fer Pascual  -  Phone +54 351 3414403  -  email pascualefernando@gmail.com
                     </Typography>
                 </Toolbar>
             </AppBar>

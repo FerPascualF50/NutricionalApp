@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import IconButton from '@mui/material/IconButton';
 import { anyFoodDishes } from '../constants';
-
 
 const AnyFoodDidhes = ({ getData }) => {
   const [query, setQuery] = useState();
@@ -19,8 +17,13 @@ const AnyFoodDidhes = ({ getData }) => {
   };
 
   return (
-    <Grid align='center' direction ='row' >
-      <Paper >
+    <Grid
+    container
+    direction="row"
+    justifyContent="center"
+    alignItems="center"
+    align='center'
+    ><Grid item xs={6} md={4}>
         <Autocomplete
           id='AnyFoodDidhes'
           freeSolo
@@ -28,10 +31,8 @@ const AnyFoodDidhes = ({ getData }) => {
           renderInput={params => (
             <TextField
               {...params}
-              label='foods'
+              label='Select your foods and click "GO"'
               margin='normal'
-              align='center'
-              justify='center'
               variant='outlined'
             />
           )}
@@ -41,10 +42,9 @@ const AnyFoodDidhes = ({ getData }) => {
           variant="contained"
           onClick={() => getFoods()}>GO
         </IconButton>
-      </Paper>
     </Grid>
+  </Grid>
   )
-
 }
 
 export default AnyFoodDidhes;
