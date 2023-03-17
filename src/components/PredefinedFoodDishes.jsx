@@ -10,16 +10,16 @@ const PredefinedFoodDishes = ({ getData, setHits }) => {
     predefinidedFoodDishes.map(foodDish => {
       foodDish.selected = foodDish.title === title ? !foodDish.selected : false;
       return !foodDish.selected ? setHits
-      : getData(document.querySelector(`#${ title }`).value.toLowerCase().trim());
-      
+        : getData(document.querySelector(`#${title}`).value.toLowerCase().trim());
+
     });
-    
+
   };
-  
+
 
   return (
-    <Grid item xs={12}>
-      <Paper className='paper'>
+    <Grid align='center' spacing = {10}>
+      <Paper >
         {
           predefinidedFoodDishes.map(foodDish => {
             const { title, selected } = foodDish;

@@ -3,13 +3,10 @@ import Grid from '@mui/material/Grid';
 import FoodDish from './FoodDish';
 import NoResult from './NoResults';
 
-
-
-const FoodDishes = ({hits}) => (
+const FoodDishes = ({ hits }) => (
   <Fragment>
     {
-      hits? (
-      <div className='root'>
+      hits ? (
         <Grid container spacing={3} justify="center">
           {hits.map(hit => {
             const { uri, label, image, calories, ingredients } = hit.recipe;
@@ -24,10 +21,9 @@ const FoodDishes = ({hits}) => (
             );
           })}
         </Grid>
-      </div>
-    ) : (
-      <NoResult />
-    )}
+      ) : (
+        <NoResult />
+      )}
   </Fragment>
 );
 

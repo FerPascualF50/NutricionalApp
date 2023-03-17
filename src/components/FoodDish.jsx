@@ -5,7 +5,7 @@ import Paper from '@mui/material/Paper';
 
 const FoodDish = ({label, image, calories, ingredients}) => (
   <Grid  item xs={12} sm={6} md={4}  >
-    <Paper variant="outlined" >
+    <Paper align='center' variant="outlined" >
       <h4>{label}</h4>
       <img src={image} alt={label}  />
       <h3>{`${Math.trunc(calories)} calories`}</h3>

@@ -19,7 +19,7 @@ const AnyFoodDidhes = ({ getData }) => {
   };
 
   return (
-    <Grid item xs={12} sm={6}>
+    <Grid align='center' direction ='row' >
       <Paper >
         <Autocomplete
           id='AnyFoodDidhes'
@@ -30,6 +30,8 @@ const AnyFoodDidhes = ({ getData }) => {
               {...params}
               label='foods'
               margin='normal'
+              align='center'
+              justify='center'
               variant='outlined'
             />
           )}
@@ -39,7 +41,6 @@ const AnyFoodDidhes = ({ getData }) => {
           variant="contained"
           onClick={() => getFoods()}>GO
         </IconButton>
-
       </Paper>
     </Grid>
   )

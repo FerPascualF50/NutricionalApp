@@ -1,14 +1,21 @@
-import React from 'react'
-import { AppBar, Toolbar } from '@mui/material';
+import React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 
-const Header = () => (
-    
-    <AppBar position='sticky'>
-        <Toolbar>
-            <h1>Nutricional App</h1>
+const Header = () => {
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar align='center' position="static">
+        <Toolbar  >
+          <Typography  variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            NUTRICION APP
+          </Typography>
         </Toolbar>
-    </AppBar>
-
-);
+      </AppBar>
+    </Box>
+  );
+}
 
 export default Header;

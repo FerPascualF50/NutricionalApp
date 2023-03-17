@@ -3,8 +3,6 @@ import Grid from '@mui/material/Grid';
 import AnyFoodDishes from './AnyFoodDidhes';
 import PredefinedFoodDishes from './PredefinedFoodDishes';
 import FoodDishes from './FoodDishes';
-//import NoResults from './NoResults';
-
 import { getApiUrl } from '../constants/index';
 
 
@@ -21,14 +19,13 @@ const SearchFoodDishes = () => {
   }
 
   return (
-    <Fragment>
-      <div className='root'>
-        <Grid container spacing={3} justify='center'>
-          <AnyFoodDishes getData={getData} />
+    
+    <Fragment >
+        <Grid  >
+          <AnyFoodDishes  getData={getData} />
           <PredefinedFoodDishes getData={getData} setHits={setHits} />
         </Grid>
-      </div>
-      {hits && <FoodDishes hits={hits} ></FoodDishes>}
+      {hits && <FoodDishes  hits={hits} ></FoodDishes>}
     </Fragment>
   );
 
